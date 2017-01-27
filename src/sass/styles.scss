@@ -47,13 +47,27 @@ a {
       position: absolute;
       top: 50%;
       left: 50%;
-      &:nth-child(1) { animation: rot 15s infinite 3.0s linear; }
-      &:nth-child(2) { animation: rot 15s infinite 6.0s linear; }
-      &:nth-child(3) { animation: rot 15s infinite 9.0s linear; }
-      &:nth-child(4) { animation: rot 15s infinite 12.0s linear; }
-      &:nth-child(5) { animation: rot 15s infinite 15.0s linear; }
+      transform: rotate(0deg)
+                 translate(-250px)
+                 rotate(0deg);
     }
   }
+}
+
+ul.init-spinning li {
+  &:nth-child(1) { animation: rot 3s infinite 0.0s linear; }
+  &:nth-child(2) { animation: rot 3s infinite 0.6s linear; }
+  &:nth-child(3) { animation: rot 3s infinite 1.2s linear; }
+  &:nth-child(4) { animation: rot 3s infinite 1.8s linear; }
+  &:nth-child(5) { animation: rot 3s infinite 2.4s linear; }
+}
+
+ul.is-spinning li {
+  &:nth-child(1) { animation: rot 15s infinite 0.0s linear; }
+  &:nth-child(2) { animation: rot 15s infinite 3.0s linear; }
+  &:nth-child(3) { animation: rot 15s infinite 6.0s linear; }
+  &:nth-child(4) { animation: rot 15s infinite 9.0s linear; }
+  &:nth-child(5) { animation: rot 15s infinite 12.0s linear; }
 }
 
 @keyframes rot {
