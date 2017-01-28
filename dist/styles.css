@@ -51,7 +51,6 @@ a {
     .spinningmenu ul li {
       -webkit-border-radius: 50%;
               border-radius: 50%;
-      border: 5px solid blue;
       width: 100px;
       height: 100px;
       margin: -50px;
@@ -69,50 +68,21 @@ a {
               align-items: center;
       position: absolute;
       top: 50%;
-      left: 50%;
-      -webkit-transform: rotate(0deg) translate(-250px) rotate(0deg);
-          -ms-transform: rotate(0deg) translate(-250px) rotate(0deg);
-              transform: rotate(0deg) translate(-250px) rotate(0deg); }
-
-ul.init-spinning li:nth-child(1) {
-  -webkit-animation: rot 3s infinite 0.0s linear;
-          animation: rot 3s infinite 0.0s linear; }
-
-ul.init-spinning li:nth-child(2) {
-  -webkit-animation: rot 3s infinite 0.6s linear;
-          animation: rot 3s infinite 0.6s linear; }
-
-ul.init-spinning li:nth-child(3) {
-  -webkit-animation: rot 3s infinite 1.2s linear;
-          animation: rot 3s infinite 1.2s linear; }
-
-ul.init-spinning li:nth-child(4) {
-  -webkit-animation: rot 3s infinite 1.8s linear;
-          animation: rot 3s infinite 1.8s linear; }
-
-ul.init-spinning li:nth-child(5) {
-  -webkit-animation: rot 3s infinite 2.4s linear;
-          animation: rot 3s infinite 2.4s linear; }
-
-ul.is-spinning li:nth-child(1) {
-  -webkit-animation: rot 15s infinite 0.0s linear;
-          animation: rot 15s infinite 0.0s linear; }
-
-ul.is-spinning li:nth-child(2) {
-  -webkit-animation: rot 15s infinite 3.0s linear;
-          animation: rot 15s infinite 3.0s linear; }
-
-ul.is-spinning li:nth-child(3) {
-  -webkit-animation: rot 15s infinite 6.0s linear;
-          animation: rot 15s infinite 6.0s linear; }
-
-ul.is-spinning li:nth-child(4) {
-  -webkit-animation: rot 15s infinite 9.0s linear;
-          animation: rot 15s infinite 9.0s linear; }
-
-ul.is-spinning li:nth-child(5) {
-  -webkit-animation: rot 15s infinite 12.0s linear;
-          animation: rot 15s infinite 12.0s linear; }
+      left: 50%; }
+      .spinningmenu ul li:before, .spinningmenu ul li:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 3px solid transparent;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+        -webkit-animation: spin 3s infinite;
+                animation: spin 3s infinite; }
+      .spinningmenu ul li:before {
+        border-left-color: red; }
 
 @-webkit-keyframes rot {
   from {
@@ -129,3 +99,19 @@ ul.is-spinning li:nth-child(5) {
   to {
     -webkit-transform: rotate(360deg) translate(-250px) rotate(-360deg);
             transform: rotate(360deg) translate(-250px) rotate(-360deg); } }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
