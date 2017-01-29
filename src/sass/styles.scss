@@ -3,6 +3,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: 'helvetica', sans-serif;
+  color: #444;
   background-color: skyblue;
 }
 
@@ -19,6 +20,17 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
+}
+
+.xycenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-center {
+  text-align: center;
 }
 
 .spinningmenu {
@@ -52,6 +64,11 @@ a {
       position: absolute;
       top: 50%;
       left: 50%;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #eee;
+      }
 
       &:before,
       &:after {
