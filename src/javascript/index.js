@@ -8,7 +8,6 @@ const lastSpinningElement = spinningContainer.querySelector('li:first-child');
 const rotationDuration = 30;
 // calculated duration of single item
 const rotationDurationSingle = rotationDuration / spinningElements.length;
-// set initial position of elements
 
 function initializeSpin() {
   spinningElements.forEach((el,i) => {
