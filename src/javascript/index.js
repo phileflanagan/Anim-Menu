@@ -1,8 +1,6 @@
-const spinningMenu = document.querySelector('.spinningmenu');
-const spinningContainer = spinningMenu.querySelector('ul');
+const spinningMenu = document.querySelector('.spinningmenu'); // Not currently used yet
+const spinningContainer = spinningMenu.querySelector('ul'); // Not currently used yet
 const spinningElements = spinningContainer.querySelectorAll('li');
-const lastSpinningElement = spinningContainer.querySelector('li:first-child');
-
 
 // rotation duration complete (in seconds)
 const rotationDuration = 30;
